@@ -3,9 +3,11 @@ import { createTransactions, deleteTransactions, getSummaryTransactions, getTran
 
 const router = express.Router();
 
-router.post("/", createTransactions)
 router.get("/:userId", getTransactionsByUserId)
-router.delete("/:userId", deleteTransactions)
 router.get("/summary/:userId", getSummaryTransactions)
+
+router.post("/", createTransactions)
+
+router.delete("/:userId", deleteTransactions)
 
 export default router; 
