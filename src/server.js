@@ -4,6 +4,7 @@ import rateLimiter from "./middleware/rateLimiter.js";
 import transactionsRoute from './routes/transactionsRoute.js';
 import { initDB } from './config/db.js';
 import cors from "cors";
+import job from "./config/cron.js";
 
 dotenv.config();
 const app = express();
